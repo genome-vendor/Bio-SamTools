@@ -76,6 +76,8 @@ sub find_sam {
             if -e "$samtools/$HeaderFile";
         $sam_include = "$samtools/include"
             if -e "$samtools/include/$HeaderFile";
+        $sam_include = "$samtools/include/samtools"
+            if -e "$samtools/include/samtools/$HeaderFile";
         $sam_lib     = $samtools
             if -e "$samtools/$LibFile";
         $sam_lib     = "$samtools/lib"
